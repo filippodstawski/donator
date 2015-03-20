@@ -17,8 +17,9 @@
 	require_once(SITE_PATH.'controllers/errorController.php');
         require_once(SITE_PATH.'util/Util.php');
         require_once(SITE_PATH.'util/DatabaseConnector.php');
-        require_once(SITE_PATH.'models/Object.php');
-        require_once(SITE_PATH.'models/Page.php');
+        require_once(SITE_PATH.'entities/Object.php');
+        require_once(SITE_PATH.'entities/Page.php');
+        require_once(SITE_PATH.'entities/Fragment.php');
         
 	try{
 		Router::route(new Request);

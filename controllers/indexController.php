@@ -10,8 +10,16 @@ class indexController extends baseController {
 
         $this->load->model('posts');
         
-        $vars['nazwa_zerowego_obiektu'] = $this->posts->getEntries();
+        $index = new Page('index');
+        
+        $vars = $this->posts->getEntries();
         $title = "Index";
+        
+        $index->addObject($vars, 'nazwa_zerowego_obiektu');
+        
+        $fragment = new Page('indexFragment');
+        
+        $fragment->addObject($vars, 'objekt_frag');
         
         //$this->layout - do przygotowania
         
